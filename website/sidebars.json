@@ -1,0 +1,6 @@
+{
+  "my-projects": {
+    "Projects": ["projects/projects"],
+    "MongoDB": ["projects/mongodb/mongogui"]
+  }
+}
