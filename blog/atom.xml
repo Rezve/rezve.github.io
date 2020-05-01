@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://rezve.github.io/rezve/blog</id>
+    <id>https://rezve.github.io/blog</id>
     <title>rezve Blog</title>
     <updated>2020-05-01T06:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://rezve.github.io/rezve/blog"/>
+    <link rel="alternate" href="https://rezve.github.io/blog"/>
     <subtitle>The best place to stay up-to-date with the latest rezve news and events.</subtitle>
-    <logo>https://rezve.github.io/rezve/img/favicon.ico</logo>
+    <logo>https://rezve.github.io/img/favicon.ico</logo>
     <rights>Copyright © 2020 Md. Rezve Hasan</rights>
     <entry>
         <title type="html"><![CDATA[Hello World]]></title>
-        <id>https://rezve.github.io/rezve/blog/2020/05/01/hello-world.html</id>
-        <link href="https://rezve.github.io/rezve/blog/2020/05/01/hello-world.html"/>
+        <id>https://rezve.github.io/blog/2020/05/01/hello-world.html</id>
+        <link href="https://rezve.github.io/blog/2020/05/01/hello-world.html"/>
         <updated>2020-05-01T06:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p>Setting up a static web site using <a href="https://docusaurus.io/en/">docusaurus</a>. This is really a great tool to set up simple static website. It uses markdown and react which makes this very extendable.</p>
 ]]></summary>
