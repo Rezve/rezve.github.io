@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>rezve Blog</title>
+        <link>https://rezve.github.io/rezve/blog</link>
+        <description>The best place to stay up-to-date with the latest rezve news and events.</description>
+        <lastBuildDate>Fri, 01 May 2020 06:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <image>
+            <title>rezve Blog</title>
+            <url>https://rezve.github.io/rezve/img/favicon.ico</url>
+            <link>https://rezve.github.io/rezve/blog</link>
+        </image>
+        <copyright>Copyright © 2020 Md. Rezve Hasan</copyright>
+        <item>
+            <title><![CDATA[Hello World]]></title>
+            <link>https://rezve.github.io/rezve/blog/2020/05/01/hello-world.html</link>
+            <guid>https://rezve.github.io/rezve/blog/2020/05/01/hello-world.html</guid>
+            <pubDate>Fri, 01 May 2020 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p>Setting up a static web site using <a href="https://docusaurus.io/en/">docusaurus</a>. This is really a great tool to set up simple static website. It uses markdown and react which makes this very extendable.</p>
+]]></description>
+        </item>
+    </channel>
+</rss>
