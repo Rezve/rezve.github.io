@@ -18,7 +18,7 @@
             <link>https://rezve.github.io/blog/2020/05/01/hello-world.html</link>
             <guid>https://rezve.github.io/blog/2020/05/01/hello-world.html</guid>
             <pubDate>Fri, 01 May 2020 06:00:00 GMT</pubDate>
-            <description><![CDATA[<p>Setting up a static web site using <a href="https://docusaurus.io/en/">docusaurus</a>. This is really a great tool to set up simple static website. It uses markdown and react which makes this very extendable.</p>
+            <description><![CDATA[<p>Just completed setting up a static web site using <a href="https://docusaurus.io/en/">docusaurus</a>. This is really a great tool to set up simple static website. It uses markdown and react which makes this very extendable.</p>
 ]]></description>
         </item>
     </channel>
