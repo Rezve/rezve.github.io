@@ -9,7 +9,7 @@
         <generator>https://github.com/jpmonette/feed</generator>
         <image>
             <title>rezve Blog</title>
-            <url>https://rezve.github.io/img/favicon.ico</url>
+            <url>https://rezve.github.io/</url>
             <link>https://rezve.github.io/blog</link>
         </image>
         <copyright>Copyright © 2020 Md. Rezve Hasan</copyright>
