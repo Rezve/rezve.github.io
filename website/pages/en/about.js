@@ -55,14 +55,14 @@ function About(props) {
           <header className="postHeader">
             <h1>About Me</h1>
           </header>
-          <p style={{fontSize: '18px'}}>
+          <p>
             <img src={`${baseUrl}img/rezve_hasan.jpg`} style={imageStyle} alt="Md. Rezve Hasan" />
-            Hi, I am Md. Rezve Hasan. Enthusiastic software engineer with 2+ years of experience participating<br/>
+            I am Md. Rezve Hasan. Enthusiastic software engineer with 2+ years of experience participating<br/>
             in the complete product development lifecycle of successfully launched applications. <br/>
             My current stack is Node.js, TypeScript, MongoDB, Angular etc. </p>
 
-            <h6>TECHNICAL SKILLS</h6>
-            
+            {/* <h6>TECHNICAL SKILLS</h6>
+
             <ul style={skillStyle}>
               <li>Node.js – Express.js, Mongoose, Mocha, Chai, Istanbul, Webpack, Babel </li>
               <li>PHP – Wordpress, CodeIgniter ( Helper, Hook, HMVC, MVC)</li>
@@ -71,7 +71,7 @@ function About(props) {
               <li>NoSQL (MongoDB, CLI), SQLite</li>
               <li>Angular (Module, Service, Routing, DI)</li>
               <li>Git</li>
-            </ul>
+            </ul> */}
           {/* <GridBlock contents={supportLinks} layout="threeColumn" /> */}
         </div>
       </Container>
