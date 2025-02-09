@@ -17,7 +17,7 @@
     <meta name="description"
         content="Lead Engineer passionate about building impactful solutions. From coding for fun to solving real-world problems with technology.">
     <meta name="keywords"
-        content="Software Engineer, Lead Engineer, Web Development, Programming, Coding, Software Development, JavaScript, Node.js, MongoDB, TypeScript">
+        content="Software Engineer, Lead Engineer, Backend developer, Programming, Coding, Software Development, JavaScript, Node.js, MongoDB, TypeScript">
     <meta name="author" content="Md. Rezve Hasan">
 
     <!-- Open Graph (OG) Tags for Social Media -->
@@ -70,17 +70,17 @@
             <p>Lead Engineer @ Brain Station 23</p>
         </section>
 
-        <section class="tabs">
-            <button class="tab active" data-tab="intro">Intro</button>
-            <button class="tab" data-tab="blog">Blog</button>
-            <button class="tab" data-tab="projects">Projects</button>
-            <button class="tab" data-tab="podcasts">Podcasts</button>
-            <button class="tab" data-tab="books">Books</button>
-            <button class="tab" data-tab="journey">My Journey</button>
+        <section class="tabs" role="tablist" aria-label="Content Categories">
+            <button class="tab active" data-tab="intro" role="tab" aria-selected="true" aria-controls="intro-panel" id="intro-tab">Intro</button>
+            <button class="tab" data-tab="blog" role="tab" aria-selected="false" aria-controls="blog-panel" id="blog-tab">Blog</button>
+            <button class="tab" data-tab="projects" role="tab" aria-selected="false" aria-controls="projects-panel" id="projects-tab">Projects</button>
+            <button class="tab" data-tab="podcasts" role="tab" aria-selected="false" aria-controls="podcasts-panel" id="podcasts-tab">Podcasts</button>
+            <button class="tab" data-tab="books" role="tab" aria-selected="false" aria-controls="books-panel" id="books-tab">Books</button>
+            <button class="tab" data-tab="journey" role="tab" aria-selected="false" aria-controls="journey-panel" id="journey-tab">My Journey</button>
         </section>
 
         <div class="tab-content active" id="intro">
-            <img loading="eager" src="./assets/images/md-rezve-hasan.jpg" alt="Your Picture" class="hero-image">
+            <img loading="eager" src="./assets/images/md-rezve-hasan.jpg" alt="Md. Rezve Hasan, Lead Engineer at Brain Station 23." class="hero-image">
             <p>I started loving programming in 2010 after seeing my elder brother's calculator application in the
                 terminal. I began reading The C Programming Language by Dennis Ritchie and wrote code on paper,
                 desperate to understand the magic.</p>
@@ -101,7 +101,7 @@
 
         <div class="tab-content" id="blog">
             <ul>
-                <li>Crafting the Ideal Software Architecture: Lessons from Complex Systems</li>
+                <li><a href="https://www.linkedin.com/pulse/key-lessons-building-scalable-software-architecture-md-rezve-hasan-ecowc">Crafting the Ideal Software Architecture: Lessons from Complex Systems</a></li>
             </ul>
         </div>
 
@@ -228,7 +228,7 @@
                                     <p><i class="fas fa-heart"></i> My Talented Team: The backbone of every successful
                                         feature delivery</p>
                                     <img loading="lazy" src="./assets/images/my_first_team.jpg"
-                                        alt="My highly capable team" class="timeline-img" onclick="openModal(this)">
+                                        alt="Md. Rezve Hasan's first team at Brain Station 23, working on the HungryNaki project" class="timeline-img" onclick="openModal(this)">
                                 </div>
                             </div>
                         </div>
@@ -257,7 +257,7 @@
                                 <div class="timeline-details">
                                     <p> <i class="fas fa-angle-up"></i> Promoted to Tech Lead on the TennantCo Project
                                     </p>
-                                    <img loading="lazy" src="./assets/images/team_remote.jpg" alt="Current Team"
+                                    <img loading="lazy" src="./assets/images/team_remote.jpg" alt="Md. Rezve Hasan's current remote team at Brain Station 23"
                                         class="timeline-img" onclick="openModal(this)">
                                 </div>
                             </div>
@@ -265,7 +265,7 @@
                                 <span class="timeline-dot"></span>
                                 <div class="timeline-details">
                                     <p> <i class="fa fa-utensils"></i> Celebrating our wins, one bite at a time!</p>
-                                    <img src="./assets/images/current_team.jpg" alt="Team outing" class="timeline-img"
+                                    <img src="./assets/images/current_team.jpg" alt="Brain Station 23 team outing celebrating project milestones" class="timeline-img"
                                         onclick="openModal(this)">
                                 </div>
                             </div>
@@ -277,7 +277,7 @@
                                         strategies at the Brain Station Leaders Summit
                                     </p>
                                     <img loading="lazy" src="./assets/images/leadership-summit-1.jpg"
-                                        alt="Leaders Summit 2023" class="timeline-img" onclick="openModal(this)">
+                                        alt="Md. Rezve Hasan at the Brain Station 23 Leaders Summit 2023" class="timeline-img" onclick="openModal(this)">
                                 </div>
                             </div>
                         </div>
