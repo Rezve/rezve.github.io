@@ -97,6 +97,13 @@ footer {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+.section-panel {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #cecece;
+    border-radius: 10px;
+}
+
 .contact-info {
     margin-bottom: 20px;
 }
@@ -169,7 +176,7 @@ footer p {
     background: #ffffff;
     border-radius: 8px;
     padding: 10px 20px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
     margin-left: 20px;
 }
 
@@ -370,3 +377,7 @@ footer p {
   }
 
   /* podcast end */
+
+  /* utils */
+
+  /* end utils */

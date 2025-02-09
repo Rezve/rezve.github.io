@@ -322,6 +322,7 @@
 
         tabs.forEach(tab => {
             tab.addEventListener('click', () => {
+                const targetTabId = tab.dataset.tab;
                 const targetTab = document.getElementById(tab.dataset.tab);
 
                 tabs.forEach(t => t.classList.remove('active'));
@@ -329,6 +330,9 @@
 
                 tab.classList.add('active');
                 targetTab.classList.add('active');
+
+                const newUrl = window.location.origin + window.location.pathname + '#' + targetTabId;  // Construct URL with hash
+                history.pushState({ tab: targetTabId }, "", newUrl); // Use pushState
             });
         });
 
@@ -356,6 +360,46 @@
             }
         };
 
+        // Handle initial page load (for direct links)
+        window.addEventListener('DOMContentLoaded', () => {
+            const initialTabId = window.location.hash ? window.location.hash.substring(1) : 'intro'; // Get tab from hash or default to intro
+            const initialTab = document.getElementById(initialTabId);
+            const tab = document.querySelector(`.tab[data-tab="${initialTabId}"]`);
+
+            if (initialTab) {
+                tabs.forEach(t => t.classList.remove('active'));
+                tabContents.forEach(tc => tc.classList.remove('active'));
+
+                tab.classList.add('active');
+                initialTab.classList.add('active');
+            }
+        });
+
+        // Handle browser back/forward navigation
+        window.addEventListener('popstate', (event) => {
+            if (event.state && event.state.tab) {
+                const targetTabId = event.state.tab;
+                const targetTab = document.getElementById(targetTabId);
+                const tab = document.querySelector(`.tab[data-tab="${targetTabId}"]`);
+
+                tabs.forEach(t => t.classList.remove('active'));
+                tabContents.forEach(tc => tc.classList.remove('active'));
+
+                tab.classList.add('active');
+                targetTab.classList.add('active');
+            } else {
+                const defaultTabId = window.location.hash ? window.location.hash.substring(1) : 'intro';
+                const defaultTab = document.getElementById(defaultTabId);
+                const tab = document.querySelector(`.tab[data-tab="${defaultTabId}"]`);
+
+                tabs.forEach(t => t.classList.remove('active'));
+                tabContents.forEach(tc => tc.classList.remove('active'));
+
+                tab.classList.add('active');
+                defaultTab.classList.add('active');
+
+            }
+        });
     </script>
 
 </body>
