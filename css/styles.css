@@ -151,7 +151,7 @@ footer p {
 .timeline-item {
     display: flex;
     align-items: flex-start;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     position: relative;
 }
 
@@ -278,6 +278,23 @@ footer p {
     .contact-info a {
         margin: 0 10px;
     }
+
+    .modal-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 95%;
+        max-height: 95%;
+        border-radius: 0;
+        margin: 0;
+    }
+
+    .close {
+        top: 10px;
+        right: 15px;
+        font-size: 1.5rem;
+    }
 }
 
 /* Smaller screen adjustments */
@@ -307,3 +324,49 @@ footer p {
         transform: translateY(0);
     }
 }
+
+/* podcast */
+.podcast-signup {
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+  }
+  
+  .podcast-signup h2 {
+      margin-bottom: 10px;
+  }
+  
+  .podcast-signup .email-capture {
+      max-width: 400px;
+      margin: 0 auto;
+      display: flex; 
+  }
+  
+  .podcast-signup .email-capture input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px; 
+  }
+  
+  .podcast-signup .email-capture button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+  }
+  
+  #podcast-message {
+    margin-top: 10px;
+    color: green;
+  }
+  
+  #podcast-message.error {
+    color: red;
+  }
+
+  /* podcast end */
