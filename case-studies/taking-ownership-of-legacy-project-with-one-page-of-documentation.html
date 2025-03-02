@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NWWXBSXW');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taking Ownership of a Legacy Project</title>
+    <meta name="description" content="Case study on taking ownership of a legacy food delivery platform with minimal documentation and improving its performance.">
+    <meta name="keywords" content="legacy project, food delivery system, MongoDB, Node.js, performance optimization, case study">
+    <meta name="author" content="Md. Rezve Hasan">
+
+    <!-- Open Graph (OG) Tags for Social Media -->
+    <meta property="og:title" content="Taking Ownership of a Legacy Project">
+    <meta property="og:description" content="How I took over a critical food delivery platform with minimal documentation and optimized its performance.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://rezve.com/case-studies/taking-ownership-of-legacy-project-with-one-page-of-documentation.html">
+
+    <link rel="canonical" href="https://rezve.com">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta name="robots" content="index, follow">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 40px;
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        ul {
+            margin-left: 20px;
+        }
+        .back-button {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .back-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "name": "Md. Rezve Hasan",
+          "url": "https://rezve.com",
+          "sameAs": [
+            "https://github.com/rezve",
+            "https://linkedin.com/in/rezve"
+          ],
+          "jobTitle": "Lead Software Engineer",
+          "worksFor": {
+            "@type": "Organization",
+            "name": "Brain Station 23"
+          }
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NWWXBSXW" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    
+    <main>
+        <a href="javascript:history.back()" class="back-button">&larr; Back</a>
+        <h1>Taking Ownership of a Legacy Project with Just One Page of Documentation</h1>
+    
+    <h2>Introduction</h2>
+    <p>Imagine inheriting a critical food delivery system that serves thousands of customers daily—yet, the only documentation you receive is a single page with a few lines about its features. That was the challenge I faced when I took over HungryNaki, an online platform where users order food from over 750 restaurants across Dhaka, Chittagong, and Sylhet.</p>
+    <p>The platform operates with 1,500+ riders and 25 hubs, ensuring most orders are delivered within an hour. Customers rely on its website and mobile apps to search for restaurants, place orders, and get their food delivered seamlessly. However, the system struggled to handle peak-hour traffic, leading to frequent failures, frustrated customers, and business disruptions.</p>
+    
+    <h2>The Challenge</h2>
+    <p>I was assigned as the lead for this project, a live system with ongoing client dissatisfaction. The system struggled to handle peak-hour traffic, particularly in the evenings when most customers placed orders or when the marketing team launched new discount promotions.</p>
+    <p>This was not a small system—it included:</p>
+    <ul>
+        <li>1 iOS app</li>
+        <li>3 Android apps</li>
+        <li>3 web platforms</li>
+        <li>1 Node.js backend supporting the entire load</li>
+        <li>100+ MongoDB collections</li>
+    </ul>
+    <p>I was leading a team of four junior developers, most of whom were new to the project. The available documentation consisted of just one page, containing only a 4–5 line overview of its features.</p>
+    
+    <h2>My Approach</h2>
+    <p>My first goal was to understand the full lifecycle of a single request—from the client app or web platform to the server and all the components it passed through.</p>
+    <p>Once I gained an understanding of how the system functioned and the roles of different components, I focused on identifying system bottlenecks using metrics. However, I quickly discovered that we had minimal monitoring in place, forcing me to rely on system usage patterns instead.</p>
+    <p>I also found that the system was a monolith, running on a single server with a high load on MongoDB. To improve scalability, I planned to transition it into a modular monolith, ensuring that we wouldn’t be limited to a single instance.</p>
+    
+    <h2>Execution</h2>
+    <h3>Short-Term Fixes (Immediate Stability & Performance Improvement)</h3>
+    <ul>
+        <li><strong>Fixed DNS Issue:</strong> Discovered that our Cloudflare subscription had expired, causing intermittent failures. Renewed the subscription to restore stability.</li>
+        <li><strong>Increased System Capacity:</strong> Adjusted server resources to temporarily handle peak traffic more efficiently.</li>
+        <li><strong>Database Indexing:</strong> Analyzed MongoDB queries and added missing indexes to speed up frequent read operations, reducing query execution time.</li>
+    </ul>
+    
+    <h3>Long-Term Fixes (Scalability & Architectural Improvements)</h3>
+    <ul>
+        <li><strong>Modular Monolith Refactoring:</strong> Planned a transition from a monolithic system to a modular monolith, allowing independent scaling of critical services without full system dependency.</li>
+        <li><strong>Advanced Query Optimization & Indexing:</strong> Introduced compound indexes and fine-tuned existing ones based on query patterns to improve database efficiency further.</li>
+        <li><strong>Load Balancing & Horizontal Scaling:</strong> Deployed additional instances behind a load balancer to distribute traffic evenly.</li>
+        <li><strong>Asynchronous Processing:</strong> Moved non-critical operations (e.g., notifications, analytics updates) to background jobs using a queue system to reduce request-response time.</li>
+    </ul>
+    
+    <h2>Results/Impact</h2>
+    <p>The immediate system failures during peak hours were mitigated, allowing the business to continue operations.</p>
+    <p>However, performance was still slow at peak times, requiring further optimization efforts.</p>
+    
+    <h2>Learnings</h2>
+    <ul>
+        <li>The importance of logging and monitoring in a live system.</li>
+        <li>Prioritizing business-critical issues first—focusing on the most impactful problems rather than trying to fix everything at once.</li>
+        <li>Thorough documentation is essential—future developers can understand the code, but high-level overviews, implementation details, and key considerations are often missing.</li>
+    </ul>
+    
+    <h2>Conclusion</h2>
+    <p>Starting work on a new system—especially one with minimal documentation—can be overwhelming. The best approach is to begin with the smallest unit, gradually expand understanding, and prioritize the most critical issues first.</p>
+    
+    <h2>Key Technologies & Tools</h2>
+    <ul>
+        <li>Node.js</li>
+        <li>MongoDB</li>
+        <li>Redis</li>
+        <li>Elasticsearch</li>
+        <li>GraphQL</li>
+        <li>Java</li>
+    </ul>
+
+    </main>
+
+</body>
+
+</html>
