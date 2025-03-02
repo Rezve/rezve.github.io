@@ -36,6 +36,7 @@ img.hero-image {
 
 img.hero-image:hover{
     cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 2, 5, 0.3);
 }
 
 .hero h1 {
