@@ -71,15 +71,15 @@
         </section>
 
         <section class="tabs" role="tablist" aria-label="Content Categories">
-            <button class="tab active" data-tab="intro" role="tab" aria-selected="true" aria-controls="intro-panel" id="intro-tab">About</button>
+            <button class="tab active" data-tab="about-me" role="tab" aria-selected="true" aria-controls="about-me-panel" id="about-me-tab">About Me</button>
+            <button class="tab" data-tab="journey" role="tab" aria-selected="false" aria-controls="journey-panel" id="journey-tab">Career Journey</button>
+            <button class="tab" data-tab="projects" role="tab" aria-selected="false" aria-controls="projects-panel" id="projects-tab">My Projects</button>
+            <button class="tab" data-tab="case-studies" role="tab" aria-selected="false" aria-controls="case-studies-panel" id="case-studies-tab">Case Studies</button>
             <button class="tab" data-tab="blog" role="tab" aria-selected="false" aria-controls="blog-panel" id="blog-tab">Blog</button>
-            <button class="tab" data-tab="projects" role="tab" aria-selected="false" aria-controls="projects-panel" id="projects-tab">Projects</button>
-            <button class="tab" data-tab="podcasts" role="tab" aria-selected="false" aria-controls="podcasts-panel" id="podcasts-tab">Podcasts</button>
-            <button class="tab" data-tab="books" role="tab" aria-selected="false" aria-controls="books-panel" id="books-tab">Books</button>
-            <button class="tab" data-tab="journey" role="tab" aria-selected="false" aria-controls="journey-panel" id="journey-tab">My Journey</button>
+            <button class="tab" data-tab="podcasts" role="tab" aria-selected="false" aria-controls="podcasts-panel" id="podcasts-tab">My Podcasts</button>
         </section>
 
-        <div class="tab-content active" id="intro">
+        <div class="tab-content active" id="about-me">
             <img loading="eager" src="./assets/images/md-rezve-hasan.jpg" 
             alt="Md. Rezve Hasan, Lead Software Engineer at Brain Station 23." 
             class="hero-image" 
@@ -130,6 +130,14 @@
             </ul>
         </div>
 
+        <div class="tab-content" id="case-studies">
+            <ul>
+                <li>
+                    Taking Ownership of a Legacy Project with Just One Page of Documentation
+                </li>
+            </ul>
+        </div>
+
         <div class="tab-content" id="podcasts">
             <div class="podcast-signup">  <h2>Stay Tuned for Upcoming Podcasts!</h2>
                 <p>Love tech discussions? Subscribe below to be notified when new podcast episodes are released.</p>
@@ -150,7 +158,7 @@
 
         <div class="tab-content" id="journey">
             <section class="timeline" id="timeline">
-                <h2>My Journey</h2>
+                <h2>Career Journey</h2>
                 <div class="timeline-container">
 
                     <!-- Year 2025 -->
@@ -378,7 +386,7 @@
 
         // Handle initial page load (for direct links)
         window.addEventListener('DOMContentLoaded', () => {
-            const initialTabId = window.location.hash ? window.location.hash.substring(1) : 'intro'; // Get tab from hash or default to intro
+            const initialTabId = window.location.hash ? window.location.hash.substring(1) : 'about-me'; // Get tab from hash or default to about-me
             const initialTab = document.getElementById(initialTabId);
             const tab = document.querySelector(`.tab[data-tab="${initialTabId}"]`);
 
@@ -404,7 +412,7 @@
                 tab.classList.add('active');
                 targetTab.classList.add('active');
             } else {
-                const defaultTabId = window.location.hash ? window.location.hash.substring(1) : 'intro';
+                const defaultTabId = window.location.hash ? window.location.hash.substring(1) : 'about-me';
                 const defaultTab = document.getElementById(defaultTabId);
                 const tab = document.querySelector(`.tab[data-tab="${defaultTabId}"]`);
 
