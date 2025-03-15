@@ -2,7 +2,7 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
     margin: 0;
-    background-color: #f8f9fa;
+    background-color: #ffffff;
     color: #343a40;
     display: flex;
     flex-direction: column;
@@ -109,26 +109,8 @@ footer {
     border-radius: 10px;
 }
 
-.contact-info {
-    margin-bottom: 20px;
-}
 
-.contact-info a {
-    color: #007bff;
-    margin: 0 15px;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.contact-info a:hover {
-    color: #0056b3;
-    text-decoration: underline;
-}
-
-footer p {
-    color: #6c757d;
-    font-size: smaller;
-}
+/* .timeline */
 
 .timeline h2 {
     text-align: center;
@@ -181,7 +163,7 @@ footer p {
     background: #ffffff;
     border-radius: 8px;
     padding: 10px 20px;
-    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
     margin-left: 20px;
 }
 
@@ -208,6 +190,50 @@ footer p {
     transform: scale(1.05);
 }
 
+/* case studies */
+.case-studies-list {
+    list-style: none;
+    padding: 0;
+}
+
+.case-study-item {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden; /* Prevent potential overflow issues */
+    transition: box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.case-study-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow on hover */
+}
+
+.case-study-link {
+    display: block; /* Make the entire link clickable */
+    padding: 20px;
+    text-decoration: none;
+    color: #333;
+}
+
+.case-study-title {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    color: #007bff; /* Example link color */
+}
+
+.case-study-description {
+    margin: 0;
+    color: #666;
+    font-size: 0.9em;
+}
+
+.case-study-link:hover {
+    background-color: #f9f9f9;
+}
+
+
+/* blog */
 
 /* The Modal (background) */
 .modal {
@@ -241,6 +267,28 @@ footer p {
     font-size: 2rem;
     font-weight: bold;
     cursor: pointer;
+}
+
+/* footer */
+footer {
+    text-align: center;
+    padding: 30px 0;
+    background-color: #e0e0e0;
+    margin-top: 40px;
+}
+
+.contact-info a {
+    margin: 0 15px; /* Increased spacing for better highlight effect */
+    color: #007bff;
+    padding: 8px 15px; /* Added padding to create a clickable area */
+    border-radius: 5px; /* Rounded corners for the highlight */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+.contact-info a:hover {
+    background-color: #3498db; /* Highlight background */
+    color: white; /* Text color on highlight */
+    text-decoration: none; /* Remove underline */
 }
 
 @media (max-width: 768px) {
