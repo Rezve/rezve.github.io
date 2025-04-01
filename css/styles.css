@@ -85,6 +85,34 @@ img.hero-image:hover{
     text-align: left;
 }
 
+/* about me */
+#collapsed-paragraphs {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out; /* Adjusted transition */
+}
+
+#collapsed-paragraphs.expanded {
+    max-height: 500px;
+}
+
+.read-more-link {
+    color: #3498db;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 0.95em;
+}
+
+.read-more-link:hover {
+    text-decoration: underline;
+}
+
+.expand-icon {
+    font-size: 0.8em;
+    margin-left: 5px;
+}
 
 /* footer */
 footer {

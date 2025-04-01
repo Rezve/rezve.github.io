@@ -80,23 +80,26 @@
         </section>
 
         <div class="tab-content active" id="about-me">
-            <img loading="eager" src="./assets/images/md-rezve-hasan.jpg" 
-            alt="Md. Rezve Hasan, Lead Software Engineer at Brain Station 23." 
-            class="hero-image" 
-            onclick="openModal(this)">
-            <p>
-                I started loving programming in <strong>2010</strong> after seeing my elder brother’s calculator application in the terminal. 
-                It felt like magic. I picked up <em>The C Programming Language</em> by <strong>Dennis Ritchie</strong> and started writing code on paper, 
-                desperate to understand how it all worked.
-            </p>
+            <img loading="eager" src="./assets/images/md-rezve-hasan.jpg"
+                alt="Md. Rezve Hasan, Lead Software Engineer at Brain Station 23." class="hero-image" onclick="openModal(this)">
+        
+                <a href="#" id="toggle-paragraphs" class="read-more-link">💎 Back Story <span class="expand-icon">🔽</span></a>
+        
+            <div id="collapsed-paragraphs" class="collapsed">
+                <p>
+                    I started loving programming in <strong>2010</strong> after seeing my elder brother’s calculator application in the terminal.
+                    It felt like magic. I picked up <em>The C Programming Language</em> by <strong>Dennis Ritchie</strong> and started writing code on paper,
+                    desperate to understand how it all worked.
+                </p>
+        
+                <p>
+                    Later, I moved into web development and building a couple of <strong>web applications</strong>.
+                    To deepen my understanding of <strong>OOP</strong>, I started learning <strong>Java</strong>, where I developed two games and a few desktop applications.
+                </p>
+            </div>
         
             <p>
-                Later, I moved into web development and building a couple of <strong>web applications</strong>. 
-                To deepen my understanding of <strong>OOP</strong>, I started learning <strong>Java</strong>, where I developed two games and a few desktop applications.
-            </p>
-        
-            <p>
-                Once I realized how many problems I could solve by writing code, I decided to pursue <strong>Computer Science Engineering</strong>. 
+                Once I realized how many problems I could solve by writing code, I decided to pursue <strong>Computer Science Engineering</strong>.
                 Beyond studying core subjects, I explored different areas—building a few <strong>Android apps</strong>, games in <strong>Unity</strong> and <strong>C++</strong>, and working with <strong>Node.js</strong> and <strong>MongoDB</strong>.
             </p>
         
@@ -105,15 +108,15 @@
             </p>
         
             <p>
-                I can remember always having the mindset, “If it takes code, I can program it.” But over time, I found myself 
-                moving closer to the <strong>business side of software development</strong>. Now, everything I do is about the value I bring to the end user. 
-                Every line of code I write is aimed at solving a problem, and every tradeoff I consider is based on its <strong>impact on users and businesses</strong>.
+                I can remember always having the mindset, <i>“If it takes code, I can program it.”</i> But over time, I found myself
+                moving closer to the business side of software development. Now, everything I do is about the <strong> value I bring</strong> to the end user.
+                Every line of code I write is aimed at <strong>solving a problem</strong>, and every tradeoff I consider is based on its <strong>impact on users and businesses</strong>.
             </p>
         
             <p>
                 I moved from writing code just for the sake of it to writing code that matters—code that brings real <strong>value</strong>.
             </p>
-        </div>
+    </div>
 
         <div class="tab-content" id="blog">
             <ul class="case-studies-list">
@@ -436,6 +439,23 @@
                 defaultTab.classList.add('active');
 
             }
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const collapsedParagraphs = document.getElementById('collapsed-paragraphs');
+            const toggleLink = document.getElementById('toggle-paragraphs');
+            const expandIcon = document.querySelector('.expand-icon');
+
+            toggleLink.addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent default link behavior
+                if (collapsedParagraphs.classList.contains('expanded')) {
+                    collapsedParagraphs.classList.remove('expanded');
+                    toggleLink.innerHTML = '💎 Back Story <span class="expand-icon">🔽</span>';
+                } else {
+                    collapsedParagraphs.classList.add('expanded');
+                    toggleLink.innerHTML = '💎 Read Less <span class="expand-icon">🔼</span>';
+                }
+            });
         });
     </script>
 
